@@ -38,6 +38,7 @@ function App() {
       setEmail("")
 
       setHasBeenSubmitted(true)
+
     }
 
     const formMessage = () => {
