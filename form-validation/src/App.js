@@ -24,6 +24,7 @@ function App() {
   const [firstName, setFirstName] = useState("")
   const [lastName, setLastName] = useState("")
   const [email, setEmail] = useState("")
+  const [hasBeenSubmitted, setHasBeenSubmitted] = useState(false)
   const [state, dispatch] = useReducer(reducer, [])
 
 
@@ -35,11 +36,23 @@ function App() {
       setFirstName("")
       setLastName("")
       setEmail("")
+
+      setHasBeenSubmitted(true)
     }
 
+    const formMessage = () => {
+      if( hasBeenSubmitted ) {
+    return "Thank you for submitting the form!";
+} else {
+    return "Welcome, please submit the form";
+}
+  };
+
   return (
+
     <div className="App">
       <form className="form" onSubmit={handleSubmit}>
+        <h2>{ formMessage() }</h2>
         <div className="formInput">
           <label>First Name: </label>
           <input type="text" className="input" onChange={(e) => setFirstName(e.target.value)} value={firstName} />
