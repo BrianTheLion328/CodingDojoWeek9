@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.App {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.formInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px 5px 10px 5px;
+}
+.input {
+    margin-top: 20px;
+}
+label {
+    margin-left: 5px;
+}
+.mappedResults {
+    margin: 45px 10px 10px 10px;
+    border: 1px solid black;
+}
+.mappedResults p {
+    margin-bottom: 10px;
+    padding: 15px;
+}
+.displayResults {
+    display: flex;
+}
