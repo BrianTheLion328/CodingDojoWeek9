@@ -42,7 +42,7 @@ function App() {
     }
 
     const formMessage = () => {
-      if( hasBeenSubmitted ) {
+      if( hasBeenSubmitted && firstName.length > 1) {
     return "Thank you for submitting the form!";
 } else {
     return "Welcome, please submit the form";
